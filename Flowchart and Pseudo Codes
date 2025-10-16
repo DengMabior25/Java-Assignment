@@ -1,0 +1,76 @@
+Flowchart: Completing Daily Assignments
+
+ ┌──────────────────────────┐
+ │        START             │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ Create list of all       │
+ │ assignments              │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ For each assignment in   │
+ │ the list                 │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ Read and understand      │
+ │ instructions             │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ Gather materials needed  │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ Work on assignment       │
+ │ (repeat until done)      │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ Review your work         │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ Submit assignment        │
+ └──────────┬───────────────┘
+            │
+            ▼
+ ┌──────────────────────────┐
+ │ More assignments left?   │
+ ├─────────────┬────────────┤
+ │Yes          │No          │
+ ▼             ▼             │
+(Repeat)      ┌──────────────────────────┐
+              │ Display “All assignments │
+              │ completed successfully!” │
+              └──────────┬───────────────┘
+                         │
+                         ▼
+               ┌──────────────────────────┐
+               │          END             │
+               └──────────────────────────┘
+
+2. Pseudo Code
+BEGIN
+    CREATE a list of all assignments
+    FOR each assignment in the list DO
+        DISPLAY assignment name
+        READ and understand instructions
+        GATHER necessary materials
+        WHILE assignment not completed DO
+            WORK on assignment
+        END WHILE
+        REVIEW the work
+        SUBMIT the assignment
+    END FOR
+    DISPLAY "All assignments completed successfully!"
+END
