@@ -1,0 +1,44 @@
+1. Money withou Mistakes
+// Using double (may cause rounding errors)
+double price = 19.99;
+int quantity = 3;
+double taxRate = 0.11;
+double total = price * quantity * (1 + taxRate);
+System.out.println("Total (double): " + total);
+
+// Using BigDecimal (more accurate)
+import java.math.BigDecimal;
+
+BigDecimal priceBD = new BigDecimal("19.99");
+BigDecimal quantityBD = new BigDecimal("3");
+BigDecimal taxBD = new BigDecimal("0.11");
+
+BigDecimal totalBD = priceBD.multiply(quantityBD)
+                            .multiply(BigDecimal.ONE.add(taxBD));
+System.out.println("Total (BigDecimal): " + totalBD);
+3. Type Capacity Puzzle
+| Requirement                               | Type      | Explanation                                                       |
+| ----------------------------------------- | --------- | ----------------------------------------------------------------- |
+| 1. Number of students in a school         | `int`     | A whole number that fits within integer range (up to ~2 billion). |
+| 2. The first letter of someone’s name     | `char`    | Represents a single character, e.g., 'A'.                         |
+| 3. Whether the light switch is ON or OFF  | `boolean` | True/false values fit logical states.                             |
+| 4. Distance between planets in kilometers | `long`    | Large numbers exceeding int range require 64-bit long.            |
+
+
+3.Unexpected Results with Division
+int x = 7 / 2;
+double y = 7 / 2;
+double z = 7 / 2.0;
+
+System.out.println(x);
+System.out.println(y);
+System.out.println(z);
+
+4. Literal Confusion
+long big = 3000000000L; // Add 'L' for long literal
+float f = 2.5f;         // Add 'f' for float literal
+char c = 'A';            // Use single quotes for char
+
+5. Overflow Experiment
+int max = 2147483647; // Integer.MAX_VALUE
+System.out.println(max + 1);
