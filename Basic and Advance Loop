@@ -1,0 +1,53 @@
+Case 1
+for (int i = 1; i <= 4; i++) {         // Outer loop → rows
+    for (int j = 1; j <= 8; j++) {     // Inner loop → columns
+        System.out.print(j + " ");
+    }
+    System.out.println();              // New line after each row
+}
+
+Case 
+for (int i = 1; i <= 3; i++) {         // Outer loop → rows
+    int num = i;                       // Start number depends on row
+    for (int j = 1; j <= 7; j++) {     // Inner loop → 7 columns
+        System.out.print(num + " ");
+        num += 2;                      // Increase by 2 each step
+    }
+    System.out.println();
+}
+
+Case
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        System.out.println(i + " x " + j + " = " + (i * j));
+    }
+}
+
+Case
+for (int i = 1; i <= 8; i++) {
+    for (int j = i; j <= 8; j++) {
+        System.out.print(j + " ");
+    }
+    System.out.println();
+}
+
+Case
+int a = 0, b = 1;
+System.out.print(a + " " + b + " ");
+for (int i = 3; i <= 10; i++) {
+    int c = a + b;
+    System.out.print(c + " ");
+    a = b;
+    b = c;
+}
+
+Case
+int a = 0, b = 0, c = 1;
+System.out.print(a + " " + b + " " + c + " ");
+for (int i = 4; i <= 10; i++) {
+    int d = a + b + c;
+    System.out.print(d + " ");
+    a = b;
+    b = c;
+    c = d;
+}
