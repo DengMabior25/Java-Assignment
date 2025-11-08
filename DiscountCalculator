@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class DiscountCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        final double PRICE_PER_ITEM = 20000;
+        System.out.print("Enter total quantity: ");
+        int quantity = sc.nextInt();
+
+        // Calculate discount
+        int discountStep = quantity / 10;  // one 5% discount per 10 items
+        if (discountStep > 10) discountStep = 10; // max 50% discount
+        double discountPercent = discountStep * 5; // 5% each step, max 50%
+
+        // Calculate total
+        double totalPrice = quantity * PRICE_PER_ITEM;
+        double discountAmount = totalPrice * (discountPercent / 100);
+        double finalPrice = totalPrice - discountAmount;
+
+        // Output
+        System.out.println("\n--- Receipt ---");
+        System.out.println("Quantity       : " + quantity);
+        System.out.println("Price per item : " + PRICE_PER_ITEM);
+        System.out.println("Discount       : " + discountPercent + "%");
+        System.out.println("Total before discount : " + totalPrice);
+        System.out.println("Discount amount       : " + discountAmount);
+        System.out.println("Final total price     : " + finalPrice);
+    }
+}
