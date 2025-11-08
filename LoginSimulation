@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LoginSimulation {
+    // Static ArrayLists for usernames and passwords
+    static ArrayList<String> usernames = new ArrayList<>();
+    static ArrayList<String> passwords = new ArrayList<>();
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Add at least 5 username-password pairs
+        usernames.add("coder");
+        passwords.add("coder123");
+
+        usernames.add("java");
+        passwords.add("java321");
+
+        usernames.add("samuel");
+        passwords.add("sam211");
+
+        usernames.add("ssd");
+        passwords.add("ssd2011");
+
+        usernames.add("ntown");
+        passwords.add("ntown1505");
+
+        // --- LOGIN SIMULATION ---
+        System.out.print("Enter username: ");
+        String inputUser = sc.nextLine();
+
+        System.out.print("Enter password: ");
+        String inputPass = sc.nextLine();
+
+        boolean isValid = false;
+
+        // Check if username and password match
+        for (int i = 0; i < usernames.size(); i++) {
+            if (inputUser.equals(usernames.get(i)) && inputPass.equals(passwords.get(i))) {
+                isValid = true;
+                break;
+            }
+        }
+
+        // Display result
+        if (isValid) {
+            System.out.println("Username and password valid, you can login into the dashboard.");
+        } else {
+            System.out.println("Wrong username and password.");
+        }
+    }
+}
