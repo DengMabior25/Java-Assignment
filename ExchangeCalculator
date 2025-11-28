@@ -1,0 +1,12 @@
+public class ExchangeCalculator {
+     public static void main(String[] args) {
+        int totalPayment = 15000;
+        int money = 100000;
+
+        int exchange = money - totalPayment;
+
+        System.out.println("Total Payment : " + totalPayment);
+        System.out.println("Money Given : + " + money);
+        System.out.println("Exchange : " + exchange);
+     }
+}
