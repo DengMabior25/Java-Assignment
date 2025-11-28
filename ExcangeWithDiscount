@@ -1,0 +1,24 @@
+public class ExchangeWithDiscount {
+    public static void main(String[] args) {
+        int totalPayment = 75000;
+        int money = 150000;
+
+        double discount = 0;
+
+        if (totalPayment >= 200000) {
+            discount = 0.20;
+        } else if (totalPayment >= 50000) {
+            discount = 0.10;
+        }
+        
+        double discountAmount = totalPayment * discount;
+        double finalPayment = totalPayment - discountAmount;
+        double exchange = money - finalPayment;
+
+        System.out.println("Original Total Payment : " + totalPayment);
+        System.out.println("Discount : " + (discount * 100) + "%");
+        System.out.println("Final Payment : " + finalPayment);
+        System.out.println("Money Given : + " + money);
+        System.out.println("Exchange : " + exchange);
+    }
+}
